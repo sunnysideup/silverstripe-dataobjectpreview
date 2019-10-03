@@ -28,5 +28,11 @@
         "psr-4": {
             "Heyday\\DataObjectPreview\\": "src/"
         }
+    },
+    "extra": {
+        "expose": [
+            "client/css",
+            "client/js"
+        ]
     }
 }
