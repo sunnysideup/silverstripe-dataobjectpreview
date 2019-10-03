@@ -2,9 +2,6 @@
 
 namespace Heyday\DataObjectPreview;
 
-
-
-
 /**
  * Class DataObjectPreviewInterface
  */

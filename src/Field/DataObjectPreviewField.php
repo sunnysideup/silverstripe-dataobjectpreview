@@ -3,10 +3,9 @@
 namespace Heyday\DataObjectPreview\Field;
 
 use DatalessField;
-use DataObjectPreviewInterface;
 use DataObjectPreviewer;
+use DataObjectPreviewInterface;
 use Requirements;
-
 
 /**
  * Class DataObjectPreviewField
@@ -17,10 +16,12 @@ class DataObjectPreviewField extends DatalessField
      * @var DataObjectPreviewInterface
      */
     protected $record;
+
     /**
      * @var DataObjectPreviewer
      */
     protected $previewer;
+
     /**
      * @param The                        $name
      * @param DataObjectPreviewInterface $record
@@ -37,11 +38,12 @@ class DataObjectPreviewField extends DatalessField
             $name
         );
     }
+
     /**
      * @param  array  $properties
      * @return string
      */
-    public function Field($properties = array())
+    public function Field($properties = [])
     {
         Requirements::javascript(DATAOBJECTPREVIEW_DIR . '/js/DataObjectPreviewer.js');
         return $this->previewer->preview($this->record);

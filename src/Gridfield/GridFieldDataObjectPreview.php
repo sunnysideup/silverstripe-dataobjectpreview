@@ -2,12 +2,11 @@
 
 namespace Heyday\DataObjectPreview\Gridfield;
 
-use GridField_ColumnProvider;
-use GridField_HTMLProvider;
 use DataObjectPreviewer;
 use DataObjectPreviewInterface;
+use GridField_ColumnProvider;
+use GridField_HTMLProvider;
 use Requirements;
-
 
 /**
  * Class GridFieldDataObjectPreview
@@ -18,6 +17,7 @@ class GridFieldDataObjectPreview implements GridField_ColumnProvider, GridField_
      * @var DataObjectPreviewer
      */
     protected $previewer;
+
     /**
      * @param DataObjectPreviewer $previewer
      */
@@ -25,27 +25,31 @@ class GridFieldDataObjectPreview implements GridField_ColumnProvider, GridField_
     {
         $this->previewer = $previewer;
     }
+
     /**
      * Start GridField_ColumnProvider
      */
+
     /**
      * @param GridField $gridField
      * @param           $columns
      */
     public function augmentColumns($gridField, &$columns)
     {
-        if (!in_array('Preview', $columns)) {
+        if (! in_array('Preview', $columns, true)) {
             array_unshift($columns, 'Preview');
         }
     }
+
     /**
      * @param  GridField $gridField
      * @return array
      */
     public function getColumnsHandled($gridField)
     {
-        return array('Preview');
+        return ['Preview'];
     }
+
     /**
      * @param  GridField   $gridField
      * @param  DataObject  $record
@@ -56,10 +60,10 @@ class GridFieldDataObjectPreview implements GridField_ColumnProvider, GridField_
     {
         if ($record instanceof DataObjectPreviewInterface) {
             return $this->previewer->preview($record);
-        } else {
-            return false;
         }
+        return false;
     }
+
     /**
      * @param  GridField  $gridField
      * @param  DataObject $record
@@ -68,10 +72,11 @@ class GridFieldDataObjectPreview implements GridField_ColumnProvider, GridField_
      */
     public function getColumnAttributes($gridField, $record, $columnName)
     {
-        return array(
-            'class' => 'col-' . $columnName . ' gridfield-preview'
-        );
+        return [
+            'class' => 'col-' . $columnName . ' gridfield-preview',
+        ];
     }
+
     /**
      * @param  GridField $gridField
      * @param  string    $columnName
@@ -79,8 +84,9 @@ class GridFieldDataObjectPreview implements GridField_ColumnProvider, GridField_
      */
     public function getColumnMetadata($gridField, $columnName)
     {
-        return array('title' => $columnName);
+        return ['title' => $columnName];
     }
+
     /**
      * End GridField_ColumnProvider
      */
@@ -93,6 +99,7 @@ class GridFieldDataObjectPreview implements GridField_ColumnProvider, GridField_
         Requirements::javascript(DATAOBJECTPREVIEW_DIR . '/js/DataObjectPreviewer.js');
         Requirements::css(DATAOBJECTPREVIEW_DIR . '/css/DataObjectPreviewer.css');
     }
+
     /**
      * End GridField_HTMLProvider
      */
