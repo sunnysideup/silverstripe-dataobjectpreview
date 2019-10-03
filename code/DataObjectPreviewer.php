@@ -9,7 +9,7 @@ class DataObjectPreviewer
      * @param DataObjectPreviewInterface $record
      * @return string
      */
-    public function preview(DataObjectPreviewInterface $record)
+    public function preview($record)
     {
         $content = $record->getPreviewHtml();
         $contentMd5 = md5($content);
