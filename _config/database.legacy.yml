@@ -1,0 +1,6 @@
+SilverStripe\ORM\DatabaseAdmin:
+  classname_value_remapping:
+    DataObjectPreviewInterface: Heyday\DataObjectPreview\DataObjectPreviewInterface
+    DataObjectPreviewer: Heyday\DataObjectPreview\DataObjectPreviewer
+    GridFieldDataObjectPreview: Heyday\DataObjectPreview\Gridfield\GridFieldDataObjectPreview
+    DataObjectPreviewField: Heyday\DataObjectPreview\Field\DataObjectPreviewField
