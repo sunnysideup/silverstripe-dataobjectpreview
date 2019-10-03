@@ -1,5 +1,14 @@
 <?php
 
+namespace Heyday\DataObjectPreview\Gridfield;
+
+use GridField_ColumnProvider;
+use GridField_HTMLProvider;
+use DataObjectPreviewer;
+use DataObjectPreviewInterface;
+use Requirements;
+
+
 /**
  * Class GridFieldDataObjectPreview
  */

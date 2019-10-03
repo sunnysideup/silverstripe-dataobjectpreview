@@ -1,5 +1,10 @@
 <?php
 
+namespace Heyday\DataObjectPreview;
+
+use Director;
+
+
 /**
  * Class DataObjectPreviewer
  */

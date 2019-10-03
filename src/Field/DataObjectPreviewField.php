@@ -1,5 +1,13 @@
 <?php
 
+namespace Heyday\DataObjectPreview\Field;
+
+use DatalessField;
+use DataObjectPreviewInterface;
+use DataObjectPreviewer;
+use Requirements;
+
+
 /**
  * Class DataObjectPreviewField
  */
