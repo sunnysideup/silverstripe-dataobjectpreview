@@ -2,11 +2,17 @@
 
 namespace Heyday\DataObjectPreview\Gridfield;
 
-use DataObjectPreviewer;
-use DataObjectPreviewInterface;
-use GridField_ColumnProvider;
-use GridField_HTMLProvider;
-use Requirements;
+
+
+
+
+
+use Heyday\DataObjectPreview\DataObjectPreviewer;
+use Heyday\DataObjectPreview\DataObjectPreviewInterface;
+use SilverStripe\View\Requirements;
+use SilverStripe\Forms\GridField\GridField_ColumnProvider;
+use SilverStripe\Forms\GridField\GridField_HTMLProvider;
+
 
 /**
  * Class GridFieldDataObjectPreview

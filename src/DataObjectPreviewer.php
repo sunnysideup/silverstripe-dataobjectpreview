@@ -2,7 +2,9 @@
 
 namespace Heyday\DataObjectPreview;
 
-use Director;
+
+use SilverStripe\Control\Director;
+
 
 /**
  * Class DataObjectPreviewer
