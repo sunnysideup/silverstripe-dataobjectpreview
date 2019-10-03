@@ -23,5 +23,10 @@
         "silverstripe/reports": "*",
         "silverstripe/siteconfig": "*",
         "silverstripe/versioned": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Heyday\\DataObjectPreview\\": "src/"
+        }
     }
 }
