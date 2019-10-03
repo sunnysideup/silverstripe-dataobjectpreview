@@ -1,0 +1,5 @@
+mappings:
+  DataObjectPreviewInterface: Heyday\DataObjectPreview\DataObjectPreviewInterface
+  DataObjectPreviewer: Heyday\DataObjectPreview\DataObjectPreviewer
+  GridFieldDataObjectPreview: Heyday\DataObjectPreview\Gridfield\GridFieldDataObjectPreview
+  DataObjectPreviewField: Heyday\DataObjectPreview\Field\DataObjectPreviewField

@@ -1,5 +1,11 @@
 <?php
 
+namespace Heyday\DataObjectPreview;
+
+
+use SilverStripe\Control\Director;
+
+
 /**
  * Class DataObjectPreviewer
  */
@@ -19,18 +25,18 @@ class DataObjectPreviewer
             DATAOBJECTPREVIEW_CACHE_PATH,
             $contentMd5
         );
-        
-        if (!file_exists(DATAOBJECTPREVIEW_CACHE_PATH)) {
+
+        if (! file_exists(DATAOBJECTPREVIEW_CACHE_PATH)) {
             mkdir(DATAOBJECTPREVIEW_CACHE_PATH);
         }
 
-        if (!file_exists($htmlFilepath)) {
+        if (! file_exists($htmlFilepath)) {
             file_put_contents($htmlFilepath, $content);
         }
 
         return sprintf(
             '<div class="dataobjectpreview" data-src="%s"></div>',
-            str_replace(BASE_PATH . '/', '', $htmlFilepath)
+            str_replace(Director::baseFolder() . '/', '', $htmlFilepath)
         );
     }
 }

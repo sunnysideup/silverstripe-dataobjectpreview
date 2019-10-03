@@ -1,15 +1,38 @@
 {
-	"name": "sunnysideup/dataobjectpreview",
-	"type": "silverstripe-module",
-	"description": "Allows preview of dataobjects in GridField",
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Cam Spiers",
-			"email": "cameron@heyday.co.nz"
-		}
-	],
-	"require": {
-		"composer/installers": "~1.0"
-	}
+    "name": "sunnysideup/dataobjectpreview",
+    "type": "silverstripe-vendormodule",
+    "description": "Allows preview of dataobjects in GridField",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cam Spiers",
+            "email": "cameron@heyday.co.nz"
+        }
+    ],
+    "require": {
+        "silverstripe/framework": "~4@stable",
+        "silverstripe/assets": "*",
+        "silverstripe/config": "*",
+        "silverstripe/admin": "*",
+        "silverstripe/cms": "*",
+        "silverstripe/asset-admin": "*",
+        "silverstripe/campaign-admin": "*",
+        "silverstripe/versioned-admin": "*",
+        "silverstripe/errorpage": "*",
+        "silverstripe/graphql": "*",
+        "silverstripe/reports": "*",
+        "silverstripe/siteconfig": "*",
+        "silverstripe/versioned": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Heyday\\DataObjectPreview\\": "src/"
+        }
+    },
+    "extra": {
+        "expose": [
+            "client/css",
+            "client/js"
+        ]
+    }
 }

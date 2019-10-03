@@ -1,5 +1,7 @@
 <?php
 
+namespace Heyday\DataObjectPreview;
+
 /**
  * Class DataObjectPreviewInterface
  */
